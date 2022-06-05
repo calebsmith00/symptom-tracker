@@ -1,0 +1,32 @@
+.create-view-form {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: auto;
+  padding-top: 2rem;
+
+  button {
+    margin: 25px;
+    padding: 10px;
+    border: none;
+  }
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  .input-element {
+    &:focus {
+      outline: none;
+    }
+
+    padding: 3px;
+    margin: 0 5px;
+  }
+
+  label {
+    padding: 5px 0;
+  }
+}
