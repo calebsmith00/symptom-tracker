@@ -14,7 +14,7 @@ export default function UndecidedView({
       </p>
       <span>
         <button
-          className="btn btn-view-tracker"
+          className="btn"
           onClick={(event: React.MouseEvent<HTMLElement>) => {
             updateView("view");
           }}
@@ -22,7 +22,7 @@ export default function UndecidedView({
           View All
         </button>
         <button
-          className="btn btn-create-tracker"
+          className="btn btn-back"
           onClick={(event: React.MouseEvent<HTMLElement>) => {
             updateView("create");
           }}

@@ -4,7 +4,11 @@ import React, { useState } from "react";
 import "./views.scss";
 import Diary from "./diary";
 
-export default function ShowViews(): JSX.Element {
+interface ShowViewProps {
+  updateView: Function;
+}
+
+export default function ShowViews({ updateView }: ShowViewProps): JSX.Element {
   const { diaries } = useDiaries();
   const [diarySelected, setDiarySelected] = useState<boolean>(false);
   const [activeDiary, setActiveDiary] = useState<DiaryTypes>({
@@ -37,6 +41,9 @@ export default function ShowViews(): JSX.Element {
             />
           );
         })}
+        <div className="diary-card" onClick={() => updateView("undecided")}>
+          <p>Go Back</p>
+        </div>
       </div>
     </div>
   );

@@ -61,9 +61,16 @@ export default function CreateView({ updateView }: CreateViewComponentProps) {
         onChange={handleChange}
         required={true}
       />
-      <button className="btn" type="submit">
-        Submit
-      </button>
+
+      <div className="buttons">
+        <button className="btn" type="submit">
+          Submit
+        </button>
+
+        <span className="btn btn-back" onClick={() => updateView("undecided")}>
+          Go Back
+        </span>
+      </div>
     </form>
   );
 }

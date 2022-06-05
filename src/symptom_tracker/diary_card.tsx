@@ -18,7 +18,7 @@ export default function DiaryCard({
         handleDiarySelect(diary);
       }}
     >
-      <p style={{ width: "100%" }}>{diary.diary}</p>
+      <p>{diary.diary}</p>
     </div>
   );
 }
