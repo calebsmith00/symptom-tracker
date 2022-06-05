@@ -1,10 +1,12 @@
-import { links } from "./links";
+import { navigationLinks } from "./links";
 import "./navbar.scss";
 
 export default function Navbar() {
     const retrieveLinks = (): JSX.Element[] => {
-        return links.map((link: string): JSX.Element => {
-            return <p>{link}</p>
+        return navigationLinks.map((navigationLink: JSX.Element): JSX.Element => {
+            return (
+                <p>{navigationLink}</p>
+            );
         })
     }
     

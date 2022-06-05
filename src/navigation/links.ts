@@ -1,1 +1,0 @@
-export const links: Array<string> = ["Home", "Symptom Tracker", "About", "Contact"]
