@@ -4,6 +4,7 @@ interface InputFieldProps {
   title: string;
   placeholder: string;
   name: string;
+  required: boolean;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
@@ -12,6 +13,7 @@ export default function InputField({
   placeholder,
   name,
   onChange,
+  required,
 }: InputFieldProps): JSX.Element {
   return (
     <span className="input-field">
@@ -22,6 +24,7 @@ export default function InputField({
         placeholder={placeholder}
         className="input-element"
         onChange={onChange}
+        required
       />
     </span>
   );

@@ -13,7 +13,7 @@ export default function ViewChoice(): JSX.Element {
   return (
     <>
       {view === "undecided" && <UndecidedView updateView={updateView} />}
-      {view === "create" && <CreateView />}
+      {view === "create" && <CreateView updateView={updateView} />}
       {view === "view" && <ShowViews />}
     </>
   );
