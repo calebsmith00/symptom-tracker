@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px 15px;
+    font-size: 20px;
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: row;
+
+    p {
+        border-bottom: 1px solid #777;
+        margin: 15px;
+        padding: 5px 15px;
+
+        transition: all .6s ease-out;
+        &:hover {
+            font-size: 22px;
+            cursor: pointer;
+            transition: all .6s ease;
+        }
+    }
+}
+
+@keyframes onHover {
+    from {
+        transform: rorate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes onHoverDeselect {
+    from {
+        transform: rorate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
