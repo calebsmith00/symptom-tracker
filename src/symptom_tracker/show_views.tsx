@@ -7,15 +7,19 @@ import Diary from "./diary";
 export default function ShowViews(): JSX.Element {
   const { diaries } = useDiaries();
   const [diarySelected, setDiarySelected] = useState<boolean>(false);
+  const [activeDiary, setActiveDiary] = useState<DiaryTypes>({
+    id: 0,
+    diary: "",
+    symptoms: [],
+  });
 
-  const handleDiarySelect = (
-    e: React.MouseEvent<HTMLParagraphElement, MouseEvent>
-  ) => {
+  const handleDiarySelect = (diary: DiaryTypes) => {
     setDiarySelected(true);
+    setActiveDiary(diary);
   };
 
   return diarySelected ? (
-    <Diary />
+    <Diary id={activeDiary.id} />
   ) : (
     <div className="views">
       <h2>Select a diary: </h2>

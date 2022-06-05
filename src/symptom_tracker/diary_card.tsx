@@ -1,11 +1,10 @@
 import { DiaryTypes } from "../hooks/useDiaries";
-import { useState } from "react";
 import "./views.scss";
 import React from "react";
 
 interface DiaryCardProps {
   diary: DiaryTypes;
-  handleDiarySelect: React.MouseEventHandler<HTMLParagraphElement>;
+  handleDiarySelect: Function;
 }
 
 export default function DiaryCard({
@@ -13,10 +12,13 @@ export default function DiaryCard({
   handleDiarySelect,
 }: DiaryCardProps) {
   return (
-    <div className="diary-card">
-      <p onClick={handleDiarySelect} style={{ width: "100%" }}>
-        {diary.diary}
-      </p>
+    <div
+      className="diary-card"
+      onClick={() => {
+        handleDiarySelect(diary);
+      }}
+    >
+      <p style={{ width: "100%" }}>{diary.diary}</p>
     </div>
   );
 }

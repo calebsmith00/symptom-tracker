@@ -1,40 +1,37 @@
 .symptom-tracker {
-    padding-top: 3rem;
-    text-align: center;
-    color: rgb(78, 75, 75);
+  padding-top: 3rem;
+  text-align: center;
+  color: rgb(78, 75, 75);
 }
 
 .paragraph-header {
-    font-size: 35px;
-    font-family: 'Arial', 'Courier New', monospace;
+  font-size: 35px;
+  font-family: "Arial", "Courier New", monospace;
 }
 
 .symptom-choice {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .btn {
-    margin: 0 10px;
-    background: none;
-    border: none;
-    padding: 5px 15px;
-    font-size: 18px;
-    font-family: "Verdana", "Courier New", monospace;
-    box-shadow: 0px 2px 8px black;
-    color: #eee;
-    transition: all .5s;
+  transition: all 0.5s ease-out;
+  color: #eee;
+  padding: 8px;
+  font-family: "Verdana";
+  display: inline-block;
+  margin: 5px;
 
-    &:hover {
-        cursor: pointer;
-        transition: all .5s;
-        font-size: 20px;
-    }
+  &:hover {
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.5s ease;
+  }
 }
 
 .btn-view-tracker {
-    background: rgb(76, 199, 49);
+  background: rgb(76, 199, 49);
 }
 
 .btn-create-tracker {
-    background:rgb(60, 73, 219);
+  background: rgb(60, 73, 219);
 }
