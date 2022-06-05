@@ -61,7 +61,9 @@ export default function CreateView({ updateView }: CreateViewComponentProps) {
         onChange={handleChange}
         required={true}
       />
-      <button type="submit">Submit</button>
+      <button className="btn" type="submit">
+        Submit
+      </button>
     </form>
   );
 }
