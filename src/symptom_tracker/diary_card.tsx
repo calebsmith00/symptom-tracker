@@ -14,7 +14,9 @@ export default function DiaryCard({
 }: DiaryCardProps) {
   return (
     <div className="diary-card">
-      <p onClick={handleDiarySelect}>{diary.diary}</p>
+      <p onClick={handleDiarySelect} style={{ width: "100%" }}>
+        {diary.diary}
+      </p>
     </div>
   );
 }
