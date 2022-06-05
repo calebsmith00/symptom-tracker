@@ -19,7 +19,10 @@ export default function ShowViews(): JSX.Element {
   };
 
   return diarySelected ? (
-    <Diary id={activeDiary.id} />
+    <Diary
+      backButtonPressed={() => setDiarySelected(false)}
+      id={activeDiary.id}
+    />
   ) : (
     <div className="views">
       <h2>Select a diary: </h2>

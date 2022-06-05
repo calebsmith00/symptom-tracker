@@ -6,9 +6,13 @@ import "./diary.scss";
 
 interface DiaryProps {
   id: number;
+  backButtonPressed: Function;
 }
 
-export default function Diary({ id }: DiaryProps): JSX.Element {
+export default function Diary({
+  id,
+  backButtonPressed,
+}: DiaryProps): JSX.Element {
   const { retrieveDiary, diaries } = useDiaries();
   const [activeDiary, setActiveDiary] = useState<DiaryTypes | undefined>(
     undefined
@@ -41,6 +45,10 @@ export default function Diary({ id }: DiaryProps): JSX.Element {
             onClick={() => handleSymptomCreation(true)}
           >
             Add Symptom
+          </span>
+
+          <span className="btn btn-back" onClick={() => backButtonPressed()}>
+            Go Back
           </span>
         </>
       )}
