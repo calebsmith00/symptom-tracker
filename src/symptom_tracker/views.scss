@@ -30,3 +30,35 @@
     padding: 5px 0;
   }
 }
+
+.diaries {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+.diary-card {
+  background: rgb(232, 104, 104);
+  color: #eee;
+  margin: 5px;
+  padding: 0 15px;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-size: 18px;
+    box-shadow: 0 0 10px black;
+  }
+}
+
+.views {
+  width: 70%;
+  margin: auto;
+  color: rgb(78, 75, 75);
+  h2 {
+    color: rgb(78, 75, 75);
+    text-align: left;
+  }
+}

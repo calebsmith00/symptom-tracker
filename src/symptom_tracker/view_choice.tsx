@@ -4,7 +4,7 @@ import UndecidedView from "./undecided_view";
 import CreateView from "./create_view";
 import ShowViews from "./show_views";
 
-export default function ViewChoice(): JSX.Element {
+export default function ViewChoice(): JSX.Element | JSX.Element[] {
   const [view, setView] = useState<string>("undecided");
   const updateView = (view: string): void => {
     setView(view);

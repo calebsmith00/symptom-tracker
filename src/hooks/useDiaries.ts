@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-interface DiaryTypes {
+export interface DiaryTypes {
   id: number;
   diary: string;
   symptoms: string[];
